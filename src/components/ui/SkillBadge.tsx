@@ -1,6 +1,9 @@
-import type { Skill } from "../../types/projectType";
+interface SkillBadgeProps {
+  name: string;
+  category?: "frontend" | "backend" | "tools";
+}
 
-const SkillBadge = ({ name, category }: Skill) => {
+const SkillBadge = ({ name, category }: SkillBadgeProps) => {
   const categoryColors = {
     frontend: "bg-blue-500/10 text-blue-500",
     backend: "bg-green-500/10 text-green-500",
@@ -25,9 +28,11 @@ const SkillBadge = ({ name, category }: Skill) => {
     <span
       className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium ${nameColors[name] ?? "bg-gray-400/10 text-gray-400"}`}
     >
-      <span
-        className={`inline-flex h-2 w-2 rounded-full ${categoryColors[category] ?? "bg-gray-400"}`}
-      />
+      {category && (
+        <span
+          className={`inline-flex h-2 w-2 rounded-full ${categoryColors[category] ?? "bg-gray-400"}`}
+        />
+      )}
       {name}
     </span>
   );
