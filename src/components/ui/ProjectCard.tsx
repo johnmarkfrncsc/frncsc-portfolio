@@ -19,9 +19,7 @@ const ProjectCard = ({
       {/* wrap*/}
       <div className="flex justify-between">
         {/* title - statusBadge */}
-        <h3 className="text-md font-medium uppercase tracking-widest mb-8">
-          {title}
-        </h3>
+        <h3 className="text-md font-medium text-gray-700 mb-3">{title}</h3>
         <span
           className={`inline-flex rounded-full h-6 px-3 text-sm font-semibold mr-2 mb-2 ${statusColor[status] ?? "bg-gray-200 text-gray-700"}`}
         >
