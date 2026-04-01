@@ -12,7 +12,7 @@ const Skills = () => {
         <h3 className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-8">
           Skills
         </h3>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
             <h3 className="text-sm font-medium text-gray-700 mb-3">Frontend</h3>
             <span className="flex flex-wrap gap-3">

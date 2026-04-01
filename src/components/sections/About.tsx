@@ -16,7 +16,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="px-8 py-16 flex gap-8">
+    <section id="about" className="px-8 py-16 flex flex-col md:flex-row gap-8">
       {/* left section */}
       <div className="flex-1">
         <h3 className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-8">
