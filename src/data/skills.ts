@@ -12,7 +12,7 @@ const skills: Skill[] = [
   { name: 'Express.js', category: 'backend' },
   { name: 'Git', category: 'tools' },
   { name: 'GitHub', category: 'tools' },
-  { name: 'Linux', category: 'tools' },
+  { name: 'Postman', category: 'tools' },
 ]
 
 export default skills

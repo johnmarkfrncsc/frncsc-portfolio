@@ -21,7 +21,7 @@ const SkillBadge = ({ name, category }: SkillBadgeProps) => {
     Expressjs: "bg-gray-500/10 text-gray-500",
     Git: "bg-gray-500/10 text-gray-500",
     GitHub: "bg-gray-500/10 text-gray-500",
-    Linux: "bg-gray-500/10 text-gray-500",
+    Postman: "bg-gray-500/10 text-gray-500",
   };
 
   return (
