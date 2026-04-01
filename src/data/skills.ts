@@ -13,6 +13,8 @@ const skills: Skill[] = [
   { name: 'Git', category: 'tools' },
   { name: 'GitHub', category: 'tools' },
   { name: 'Postman', category: 'tools' },
+  { name: 'Vercel', category: 'tools' },
+  { name: 'Railway', category: 'tools' },
 ]
 
 export default skills

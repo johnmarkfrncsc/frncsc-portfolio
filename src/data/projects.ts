@@ -13,8 +13,8 @@ const projects : Project[] = [
   {
     id: 2,
     title: 'Email Sender',
-    description: 'Write and send emails directly to Gmail using Nodemailer. A fullstack TypeScript practice project.',
-    techStack: ['TypeScript', 'Node.js', 'Nodemailer'],
+    description: 'Write and send emails directly to Gmail using SendGrid. A fullstack TypeScript practice project.',
+    techStack: ['TypeScript', 'Node.js', 'SendGrid'],
     githubUrl: 'https://github.com/johnmarkfrncsc',
     status: 'completed',
   }
