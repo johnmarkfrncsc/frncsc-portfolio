@@ -1,4 +1,4 @@
-import type { Project } from "../../types/projectType";
+import type { Project } from "../../types/ProjectType";
 import SkillBadge from "./SkillBadge";
 
 const ProjectCard = ({
@@ -15,26 +15,48 @@ const ProjectCard = ({
   };
 
   return (
-    <div>
+    <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
       {/* wrap*/}
-      <div>
+      <div className="flex justify-between">
         {/* title - statusBadge */}
-        <h3>{title}</h3>
+        <h3 className="text-md font-medium uppercase tracking-widest mb-8">
+          {title}
+        </h3>
         <span
-          className={`inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 ${statusColor[status] ?? "bg-gray-200 text-gray-700"}`}
+          className={`inline-flex rounded-full h-6 px-3 text-sm font-semibold mr-2 mb-2 ${statusColor[status] ?? "bg-gray-200 text-gray-700"}`}
         >
           {status}
         </span>
       </div>
+
       {/* description  & techStack */}
-      <p>{description}</p>
-      {techStack.map((skill) => (
-        <SkillBadge key={skill} name={skill} />
-      ))}
+      <p className="tracking-wide text-gray-500 mb-4">{description}</p>
+      <span className="flex flex-wrap gap-3 mb-3">
+        {techStack.map((skill) => (
+          <SkillBadge key={skill} name={skill} />
+        ))}
+      </span>
+
       {/*github url - liveUrl*/}
       <div>
-        <a href={githubUrl}>Github</a>
-        {liveUrl && <a href={liveUrl}>Live</a>}
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex rounded-lg h-6 px-3 text-sm font-medium mr-2 mb-2 border border-gray-400"
+        >
+          Github
+        </a>
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex rounded-lg h-6 px-3 text-sm font-medium mr-2 mb-2 border border-gray-400"
+          >
+            Live
+          </a>
+        )}
       </div>
     </div>
   );

@@ -51,7 +51,7 @@ const About = () => {
               Building a personal project to practice TypeScript
             </li>
             <li className="border-b border-gray-200 py-2">
-              Exploring Next.js and its ecosystem
+              Deepening TypeScript knowledge across all projects
             </li>
             <li className="py-2">
               Contributing to open-source projects on GitHub
