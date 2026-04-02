@@ -7,15 +7,18 @@ import Project from "./components/sections/Project";
 import Contact from "./components/sections/Contact";
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <About />
-        <Skills />
-        <Project />
-        <Contact />
-      </main>
+    <div className="min-h-screen flex flex-col bg-[#0d0d0d]">
+      <div className="max-w-2xl mx-auto px-6 flex-1 flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          <Hero />
+          <About />
+          <Skills />
+          <Project />
+          <Contact />
+        </main>
+      </div>
+
       <Footer />
     </div>
   );
