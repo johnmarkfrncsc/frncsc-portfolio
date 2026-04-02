@@ -1,6 +1,6 @@
 import type { Project } from "../types/ProjectType";
-import rentara from "../assets/rentara.png"
-import emailProject from "../assets/emailProject.png"
+import rentara from "../components/assets/img/rentara.png"
+import emailProject from "../components/assets/img/emailProject.png"
 
 const projects : Project[] = [
     {
