@@ -1,27 +1,56 @@
+{
+  /* TODO: ADD RESUME/CV LINK IN THE HERO SECTION */
+}
+
 const Hero = () => {
   return (
-    <section id="hero" className="px-8 py-20">
-      <span className="inline-flex gap-1 items-center rounded-full border border-gray-200 bg-gray-800 px-2 py-1 text-xs font-medium text-white">
-        <span className="rounded-full bg-green-400 h-2 w-2" />
-        available for work
-      </span>
-      <h1 className="mt-6 text-4xl md:text-5xl font-medium text-gray-900">
-        Mark Francisco
-      </h1>
-      <h2 className="mt-2 text-4xl md:text-5xl font-medium text-gray-400">
-        Frontend / Fullstack Developer
-      </h2>
-      <p className="mt-4 text-base text-gray-500 max-w-lg leading-relaxed">
-        Building clean, functional web apps with React and Node.js. Currently
-        honing fullstack skills with TypeScript and the MERN stack.
-      </p>
-      <div className="mt-8 flex gap-3">
-        <button className="bg-gray-900 text-white px-5 py-2 rounded-lg text-sm font-medium">
-          View projects
-        </button>
-        <button className="border border-gray-200 text-gray-700 px-5 py-2 rounded-lg text-sm font-medium">
-          Get in touch
-        </button>
+    <section id="hero" className="py-12 flex justify-between items-start gap-6">
+      <div className="flex-1">
+        <h1 className="text-3xl  md:text-5xl font-bold text-[#f9fafb] mb-2">
+          hi, i'm mark. 👋
+        </h1>
+        <p className="text-sm text-white mb-3">
+          Frontend Developer · Manila, Philippines 🇵🇭
+        </p>
+        <p className="text-sm text-white leading-relaxed max-w-sm mb-6">
+          Frontend by focus, fullstack by passion. I build real things and ship
+          them live.
+        </p>
+        <div className="flex gap-2 flex-wrap">
+          <a
+            href="#projects"
+            className="text-xs font-semibold px-4 py-2 rounded-lg bg-white text-[#0d0d0d]"
+          >
+            View projects
+          </a>
+          <a
+            href="https://github.com/johnmarkfrncsc"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs px-4 py-2 rounded-lg border border-[#27272a] text-[#9ca3af]"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/johnmarkfrancisco/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs px-4 py-2 rounded-lg border border-[#27272a] text-[#9ca3af]"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="#contact"
+            className="text-xs px-4 py-2 rounded-lg border border-[#27272a] text-[#9ca3af]"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+      <div className="w-24 h-28 rounded-xl bg-[#18181b] border border-[#27272a] flex items-center justify-center shrink-0">
+        <span className="text-xs text-[#374151] text-center px-2 leading-relaxed">
+          your photo
+        </span>
       </div>
     </section>
   );
