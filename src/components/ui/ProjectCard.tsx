@@ -34,14 +34,14 @@ const ProjectCard = ({
             {status}
           </span>
         </div>
-        <p className="text-xs text-[#4b5563] leading-relaxed mb-3">
+        <p className="text-xs text-[#f9fafb] tracking-wide leading-relaxed mb-3">
           {description}
         </p>
         <div className="flex flex-wrap gap-2 mb-3">
           {techStack.map((skill) => (
             <span
               key={skill}
-              className="text-xs text-[#6b7280] border border-[#27272a] rounded-full px-2 py-0.5"
+              className="text-xs font-medium text-[#6b7280] border border-[#27272a] rounded-full px-2 py-0.5"
             >
               {skill}
             </span>
@@ -52,7 +52,7 @@ const ProjectCard = ({
             href={githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex gap-2 text-xs text-[#9ca3af] border border-[#27272a] rounded-lg px-2 py-1.5 hover:bg-[#27272a] transition-colors"
+            className="flex gap-2 text-xs font-medium text-[#9ca3af] border border-[#27272a] rounded-lg px-2 py-1.5 hover:bg-[#27272a] transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const ProjectCard = ({
               href={liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex gap-2 text-xs text-[#9ca3af] border border-[#27272a] rounded-lg px-2 py-1.5 hover:bg-[#27272a] transition-colors"
+              className="flex gap-2 text-xs font-medium text-[#9ca3af] border border-[#27272a] rounded-lg px-2 py-1.5 hover:bg-[#27272a] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

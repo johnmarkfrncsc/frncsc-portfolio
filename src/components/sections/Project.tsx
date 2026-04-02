@@ -10,7 +10,7 @@ const Project = () => {
         </h3>
         <a
           href="https://github.com/johnmarkfrncsc"
-          className="text-md text-[#4b5563]"
+          className="text-md text-[#4b5563] hover:text-[#F8F8F3] transition-colors"
         >
           view all →
         </a>
