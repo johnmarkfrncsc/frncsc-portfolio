@@ -11,18 +11,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className="sticky top-0 w-full z-10 items-center 
-    px-8 py-4 bg-transparent backdrop-blur-xs"
-    >
-      <div className="flex justify-between items-center">
-        <h2 className="text-lg font-medium">mf</h2>
+    <nav className="sticky top-0 w-full z-10 items-center py-4 bg-transparent backdrop-blur-xs">
+      <div className="flex items-center">
+        {/* ADD DARK/LIGHT THEME TOGGLE */}
         <div className="hidden md:flex gap-6">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-[#6b7280] hover:text-[#f9fafb] transition-colors"
+              className="text-md font-medium text-[#6b7280] hover:text-[#f9fafb] transition-colors"
             >
               {link.label}
             </a>

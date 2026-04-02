@@ -1,6 +1,3 @@
-{
-  /* TODO: ADD RESUME/CV LINK IN THE HERO SECTION */
-}
 import resume from "../assets/docs/resume.pdf";
 
 const Hero = () => {
