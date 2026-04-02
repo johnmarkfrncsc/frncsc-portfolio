@@ -14,7 +14,7 @@ const Professional = () => {
           className={`flex-1 text-md font-medium py-1 rounded-md transition-colors cursor-pointer ${
             activeTab === "professional"
               ? "bg-[#0d0d0d] text-[#F8F8F3]"
-              : "text-[#F8F8F3]"
+              : "text-[#F8F8F3] hover:text-[#6b7280]"
           }`}
         >
           Professional
@@ -24,7 +24,7 @@ const Professional = () => {
           className={`flex-1 text-md font-medium py-1 rounded-md transition-colors cursor-pointer ${
             activeTab === "education"
               ? "bg-[#0d0d0d] text-[#F8F8F3]"
-              : "text-[#F8F8F3]"
+              : "text-[#F8F8F3] hover:text-[#6b7280]"
           }`}
         >
           Education
@@ -43,7 +43,7 @@ const Professional = () => {
                 <h2 className="text-lg font-semibold text-[#f9fafb] mb-1">
                   {professional.company}
                 </h2>
-                <div className="flex flex-wrap items-baseline justify-between mb-3 text-md text-[#6b7280]">
+                <div className="flex flex-wrap items-baseline justify-between mb-3 text-sm text-[#6b7280]">
                   <p>{professional.position}</p>
                   <p>{professional.timeSpan}</p>
                 </div>
@@ -75,7 +75,7 @@ const Professional = () => {
               <h2 className="text-lg font-semibold text-[#f9fafb] mb-1">
                 STI San Jose Del Monte Bulacan
               </h2>
-              <div className="flex flex-wrap  justify-between mb-3 text-md text-[#6b7280]">
+              <div className="flex flex-wrap  justify-between mb-3 text-sm text-[#6b7280]">
                 <p>BS Computer Science</p>
                 <time>2021 — 2025</time>
               </div>
