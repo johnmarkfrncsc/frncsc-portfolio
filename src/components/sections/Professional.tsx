@@ -8,23 +8,23 @@ const Professional = () => {
 
   return (
     <section id="professional">
-      <div className="flex bg-[#18181b] rounded-lg p-1 mb-5">
+      <div className="flex bg-[#1F2937] rounded-lg p-1 mb-2">
         <button
           onClick={() => setActiveTab("professional")}
-          className={`flex-1 text-xs font-medium py-2 rounded-md transition-colors cursor-pointer ${
+          className={`flex-1 text-md font-medium py-2 rounded-md transition-colors cursor-pointer ${
             activeTab === "professional"
-              ? "bg-[#27272a] text-[#f9fafb]"
-              : "text-[#6b7280]"
+              ? "bg-[#0d0d0d] text-[#F8F8F3]"
+              : "text-[#F8F8F3]"
           }`}
         >
           Professional
         </button>
         <button
           onClick={() => setActiveTab("education")}
-          className={`flex-1 text-xs font-medium py-2 rounded-md transition-colors cursor-pointer ${
+          className={`flex-1 text-md font-medium py-2 rounded-md transition-colors cursor-pointer ${
             activeTab === "education"
-              ? "bg-[#27272a] text-[#f9fafb]"
-              : "text-[#6b7280]"
+              ? "bg-[#0d0d0d] text-[#F8F8F3]"
+              : "text-[#F8F8F3]"
           }`}
         >
           Education
@@ -32,7 +32,7 @@ const Professional = () => {
       </div>
 
       {activeTab === "professional" && (
-        <div className="bg-[#18181b] border border-[#27272a] rounded-xl p-4 flex flex-col gap-5">
+        <div className="bg-[#0d0d0d] border border-[#1F2937] rounded-xl p-4 flex flex-col gap-5">
           {professional.map((professional) => (
             <div key={professional.id} className="flex gap-4">
               {/* TODO: CHANGE CHAR LOGO INTO IMG LOGO */}
@@ -66,7 +66,7 @@ const Professional = () => {
 
       {activeTab === "education" && (
         <div className="flex flex-col gap-3">
-          <div className="bg-[#18181b] border border-[#27272a] rounded-xl p-4 flex gap-4">
+          <div className="bg-[#0d0d0d] border border-[#1F2937] rounded-xl p-4 flex gap-4">
             <div className="w-10 h-10 rounded-lg mt-2 bg-[#111] border border-[#27272a] flex items-center justify-center text-xs font-bold text-[#4b5563] flex-shrink-0">
               STI
             </div>

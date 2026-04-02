@@ -4,15 +4,18 @@
 
 const Hero = () => {
   return (
-    <section id="hero" className="py-12 flex justify-between items-start gap-6">
+    <section
+      id="hero"
+      className="py-12 flex mt-6 justify-between items-start gap-6"
+    >
       <div className="flex-1">
-        <h1 className="text-3xl  md:text-5xl font-bold text-[#f9fafb] mb-2">
+        <h1 className="text-4xl  md:text-5xl font-bold text-[#f9fafb] mb-2">
           hi, i'm mark.
         </h1>
-        <p className="text-sm text-white mb-3">
+        <p className="text-lg text-white mb-3">
           Frontend Developer · Manila, Philippines 🇵🇭
         </p>
-        <p className="text-sm text-white leading-relaxed max-w-sm mb-6">
+        <p className="text-lg text-white leading-relaxed max-w-sm mb-6">
           Frontend by focus, fullstack by passion. I build real things and ship
           them live.
         </p>
