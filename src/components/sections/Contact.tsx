@@ -34,7 +34,7 @@ const Contact = () => {
             <div className="w-7 h-7 rounded-lg bg-[#18181b] border border-[#27272a] flex items-center justify-center text-xs text-[#4b5563] font-bold">
               {contact.icon}
             </div>
-            <span className="text-sm font-medium text-[#6b7280]">
+            <span className="text-sm font-medium text-[#6b7280] hover:text-[#F8F8F3] transition-colors">
               {contact.label}
             </span>
           </a>
