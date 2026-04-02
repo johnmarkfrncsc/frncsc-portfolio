@@ -5,7 +5,8 @@ export interface Project {
   techStack: string[]
   githubUrl: string
   liveUrl?: string
-  status: 'completed' | 'in-progress'
+  status: 'completed' | 'in-progress',
+  image: string
 }
 
 export interface Skill {

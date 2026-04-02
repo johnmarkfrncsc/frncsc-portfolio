@@ -1,18 +1,24 @@
-import ProjectCard from "../ui/ProjectCard";
 import projects from "../../data/projects";
+import ProjectCard from "../ui/ProjectCard";
 
 const Project = () => {
   return (
-    <section id="projects" className="px-8 py-16 ">
-      <div className="">
-        <h3 className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-8">
-          Projects
+    <section id="projects" className="py-10">
+      <div className="flex justify-between items-center mb-5">
+        <h3 className="text-lg font-medium uppercase tracking-widest text-[#F8F8F3] mb-8">
+          personal projects
         </h3>
-        <div className="flex flex-col md:flex-row gap-4">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
-          ))}
-        </div>
+        <a
+          href="https://github.com/johnmarkfrncsc"
+          className="text-md text-[#4b5563]"
+        >
+          view all →
+        </a>
+      </div>
+      <div className="flex gap-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
       </div>
     </section>
   );

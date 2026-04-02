@@ -1,4 +1,6 @@
 import type { Project } from "../types/ProjectType";
+import rentara from "../assets/rentara.png"
+import emailProject from "../assets/emailProject.png"
 
 const projects : Project[] = [
     {
@@ -9,6 +11,7 @@ const projects : Project[] = [
     githubUrl: 'https://github.com/johnmarkfrncsc/Renting-App',
     liveUrl: 'https://rentara.skwtr.com',
     status: 'in-progress',
+    image: rentara,
 },
   {
     id: 2,
@@ -18,7 +21,8 @@ const projects : Project[] = [
     githubUrl: 'https://github.com/johnmarkfrncsc/emailProject',
     liveUrl: 'https://email-project-ivory.vercel.app',
     status: 'completed',
-  }
+    image: emailProject,
+  },
 ]
 
 export default projects;
