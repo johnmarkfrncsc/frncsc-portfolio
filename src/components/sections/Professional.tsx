@@ -36,7 +36,7 @@ const Professional = () => {
           {professional.map((professional) => (
             <div key={professional.id} className="flex gap-4">
               {/* TODO: CHANGE CHAR LOGO INTO IMG LOGO */}
-              <div className="w-10 h-10 rounded-lg mt-2 bg-[#111] border border-[#27272a] flex items-center justify-center text-xs font-bold text-[#4b5563] flex-shrink-0">
+              <div className="w-10 h-10 rounded-lg mt-2 bg-[#111] border border-[#27272a] flex items-center justify-center text-xs font-bold text-[#4b5563] shrink-0">
                 PCG
               </div>
               <div className="flex-1">
@@ -67,7 +67,7 @@ const Professional = () => {
       {activeTab === "education" && (
         <div className="flex flex-col gap-3">
           <div className="bg-[#0d0d0d] border border-[#1F2937] rounded-xl p-4 flex gap-4">
-            <div className="w-10 h-10 rounded-lg mt-2 bg-[#111] border border-[#27272a] flex items-center justify-center text-xs font-bold text-[#4b5563] flex-shrink-0">
+            <div className="w-10 h-10 rounded-lg mt-2 bg-[#111] border border-[#27272a] flex items-center justify-center text-xs font-bold text-[#4b5563] shrink-0">
               STI
             </div>
 

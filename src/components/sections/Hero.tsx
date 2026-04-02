@@ -16,8 +16,8 @@ const Hero = () => {
           Frontend Developer · Manila, Philippines 🇵🇭
         </p>
         <p className="text-lg text-white leading-relaxed max-w-sm mb-6">
-          Frontend by focus, fullstack by passion. I build real things and ship
-          them live.
+          Frontend focused, fullstack capable. I build and ship personal
+          projects.
         </p>
         <div className="flex gap-6 flex-wrap">
           <a
