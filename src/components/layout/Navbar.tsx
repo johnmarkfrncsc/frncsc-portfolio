@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav
       className="sticky top-0 w-full z-10 items-center 
-    px-8 py-4 border-b border-gray-200 bg-white"
+    px-8 py-4 bg-transparent backdrop-blur-sm"
     >
       <div className="flex justify-between items-center">
         <h2 className="text-lg font-medium">mf</h2>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-gray-500 hover:text-gray-900"
+              className="text-sm text-[#6b7280] hover:text-[#f9fafb] transition-colors"
             >
               {link.label}
             </a>
