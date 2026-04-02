@@ -12,3 +12,11 @@ export interface Skill {
   name: string
   category?: 'frontend' | 'backend' | 'tools'
 }
+
+export interface Professional {
+  id: number, 
+  company: string,
+  position:  string,
+  description: string[],
+  timeSpan: string
+}
