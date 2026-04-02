@@ -11,7 +11,7 @@ const Professional = () => {
       <div className="flex bg-[#1F2937] rounded-lg p-1 mb-2">
         <button
           onClick={() => setActiveTab("professional")}
-          className={`flex-1 text-md font-medium py-2 rounded-md transition-colors cursor-pointer ${
+          className={`flex-1 text-md font-medium py-1 rounded-md transition-colors cursor-pointer ${
             activeTab === "professional"
               ? "bg-[#0d0d0d] text-[#F8F8F3]"
               : "text-[#F8F8F3]"
@@ -21,7 +21,7 @@ const Professional = () => {
         </button>
         <button
           onClick={() => setActiveTab("education")}
-          className={`flex-1 text-md font-medium py-2 rounded-md transition-colors cursor-pointer ${
+          className={`flex-1 text-md font-medium py-1 rounded-md transition-colors cursor-pointer ${
             activeTab === "education"
               ? "bg-[#0d0d0d] text-[#F8F8F3]"
               : "text-[#F8F8F3]"
