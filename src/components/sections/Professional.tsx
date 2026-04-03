@@ -14,7 +14,7 @@ const Professional = () => {
           className={`flex-1 text-md font-medium py-1 rounded-md transition-colors cursor-pointer ${
             activeTab === "professional"
               ? "bg-[#0d0d0d] text-[#F8F8F3]"
-              : "text-[#F8F8F3] hover:text-[#6b7280]"
+              : "text-[#6b7280] hover:text-[#F8F8F3]"
           }`}
         >
           Professional
@@ -24,7 +24,7 @@ const Professional = () => {
           className={`flex-1 text-md font-medium py-1 rounded-md transition-colors cursor-pointer ${
             activeTab === "education"
               ? "bg-[#0d0d0d] text-[#F8F8F3]"
-              : "text-[#F8F8F3] hover:text-[#6b7280]"
+              : "text-[#6b7280] hover:text-[#F8F8F3]"
           }`}
         >
           Education
