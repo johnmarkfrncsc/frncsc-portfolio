@@ -1,62 +1,94 @@
 import { useRef, useState } from "react";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 interface SwipeCardProps {
   images: string[];
 }
 
+const SWIPE_THRESHOLD = 20;
+
 const SwipeCard = ({ images }: SwipeCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [dismissed, setDismissed] = useState<number[]>([]);
-
-  const [dragX, setDragX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
   const startX = useRef(0);
+  const isDragging = useRef(false);
+
+  const dragX = useMotionValue(0);
+  const rotate = useTransform(dragX, [-150, 150], [-15, 15]);
+  const opacity = useTransform(dragX, [-150, 0, 150], [0.5, 1, 0.5]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
+    isDragging.current = true;
     startX.current = e.clientX;
-    setDragX(0);
+    dragX.set(0);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    setDragX(e.clientX - startX.current);
+    if (!isDragging.current) return;
+    dragX.set(e.clientX - startX.current);
   };
 
   const handleMouseUp = () => {
-    setIsDragging(false);
-    if (Math.abs(dragX) > 80) {
-      setDismissed((prev) => [...prev, currentIndex]);
-      setCurrentIndex((prev) => prev + 1);
+    if (!isDragging.current) return;
+    isDragging.current = false;
+
+    if (Math.abs(dragX.get()) > SWIPE_THRESHOLD) {
+      const direction = dragX.get() > 0 ? 500 : -500;
+
+      animate(dragX, direction, {
+        duration: 0.3,
+        onComplete: () => {
+          setCurrentIndex((prev) => (prev + 1) % images.length);
+          dragX.set(0);
+        },
+      });
+    } else {
+      animate(dragX, 0, {
+        duration: 0.4,
+        type: "spring",
+        stiffness: 300,
+      });
     }
-    setDragX(0);
   };
 
   return (
     <div
-      className="relative w-24 h-28"
+      className="relative w-44 h-58"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
     >
       {images.map((img, index) => {
-        if (dismissed.includes(index)) return null;
-        const isTop = index === currentIndex;
+        const offset = (index - currentIndex + images.length) % images.length;
+
+        const isTop = offset === 0;
+
         return (
-          <div
+          <motion.div
             key={index}
             className="absolute inset-0 rounded-xl overflow-hidden"
             style={{
-              zIndex: images.length - index,
-              transform: isTop
-                ? `translateX(${dragX}px) translateY(${index * -6}px) rotate(${dragX * 0.05}deg)`
-                : `translateY(${index * -6}px) scale(${1 - index * 0.04})`,
-              transition: isDragging ? "none" : "transform 0.3s ease",
+              zIndex: images.length - offset,
+              x: isTop ? dragX : 0,
+              rotate: isTop ? rotate : 0,
+              opacity: isTop ? opacity : 1,
+              y: offset * -12,
+              scale: 1 - offset * 0.04,
               cursor: isTop ? "grab" : "default",
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 32,
             }}
             onMouseDown={isTop ? handleMouseDown : undefined}
           >
-            <img src={img} alt="photo" className="w-full h-full object-cover" />
-          </div>
+            <img
+              src={img}
+              alt="photo"
+              className="w-full h-full object-cover"
+              draggable={false}
+            />
+          </motion.div>
         );
       })}
     </div>
