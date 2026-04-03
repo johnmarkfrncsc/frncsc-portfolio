@@ -1,4 +1,8 @@
 import resume from "../assets/docs/resume.pdf";
+import SwipeCard from "../ui/SwipeCard";
+import swipe1 from "../assets/img/swipe1.jpg";
+import swipe2 from "../assets/img/swipe2.jpg";
+import swipe3 from "../assets/img/swipe3.jpg";
 
 const Hero = () => {
   return (
@@ -90,10 +94,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="w-24 h-28 rounded-xl bg-[#18181b] border border-[#27272a] flex items-center justify-center shrink-0">
-        <span className="text-xs text-[#374151] text-center px-2 leading-relaxed">
-          your photo
-        </span>
+      <div className="w-48 h-64 shrink-0 overflow-hidden">
+        <SwipeCard images={[swipe1, swipe2, swipe3]} />
       </div>
     </section>
   );
