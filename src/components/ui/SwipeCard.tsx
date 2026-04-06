@@ -52,7 +52,7 @@ const SwipeCard = ({ images }: SwipeCardProps) => {
 
   return (
     <div
-      className="relative w-44 h-58"
+      className="relative w-44 h-58 top-3 cursor-grab"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
@@ -65,25 +65,27 @@ const SwipeCard = ({ images }: SwipeCardProps) => {
         return (
           <motion.div
             key={index}
-            className="absolute inset-0 rounded-xl overflow-hidden"
+            className="absolute inset-0 rounded-xl overflow-hidden origin-bottom"
             style={{
               zIndex: images.length - offset,
-              x: isTop ? dragX : 0,
-              rotate: isTop ? rotate : 0,
+              x: isTop ? dragX : offset * 2,
+              rotate: isTop ? rotate : offset % 2 === 0 ? -5 : 5,
               opacity: isTop ? opacity : 1,
-              y: offset * -12,
-              scale: 1 - offset * 0.04,
+              y: offset * -18,
+              scale: 1 - offset * 0.06,
               cursor: isTop ? "grab" : "default",
             }}
             transition={{
               type: "spring",
               stiffness: 260,
               damping: 32,
+              delay: offset * 0.05,
             }}
             onMouseDown={isTop ? handleMouseDown : undefined}
           >
             <img
               src={img}
+              loading="eager"
               alt="photo"
               className="w-full h-full object-cover"
               draggable={false}
