@@ -5,9 +5,9 @@ interface SkillBadgeProps {
 
 const SkillBadge = ({ name, category }: SkillBadgeProps) => {
   const categoryColors = {
-    frontend: "bg-blue-500/10 text-blue-500",
-    backend: "bg-green-500/10 text-green-500",
-    tools: "bg-yellow-500/10 text-yellow-500",
+    frontend: "bg-blue-500/50 text-blue-500",
+    backend: "bg-green-500/50 text-green-500",
+    tools: "bg-yellow-500/50 text-yellow-500",
   };
   const nameColors: Record<string, string> = {
     React: "bg-blue-500/10 text-blue-500",
@@ -19,6 +19,7 @@ const SkillBadge = ({ name, category }: SkillBadgeProps) => {
     "Node.js": "bg-green-500/10 text-green-500",
     MongoDB: "bg-green-500/10 text-green-500",
     "Express.js": "bg-gray-500/10 text-gray-500",
+    "Socket.io": "bg-gray-500 text-gray-700",
     Git: "bg-gray-500/10 text-gray-500",
     GitHub: "bg-gray-500/10 text-gray-500",
     Postman: "bg-gray-500/10 text-gray-500",

@@ -10,6 +10,7 @@ const skills: Skill[] = [
   { name: 'Node.js', category: 'backend' },
   { name: 'MongoDB', category: 'backend' },
   { name: 'Express.js', category: 'backend' },
+  { name: 'Socket.io', category: 'backend' },
   { name: 'Git', category: 'tools' },
   { name: 'GitHub', category: 'tools' },
   { name: 'Postman', category: 'tools' },
