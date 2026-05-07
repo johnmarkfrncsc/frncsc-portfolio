@@ -1,10 +1,21 @@
 import type { Project } from "../types/ProjectType";
 import rentara from "../components/assets/img/rentara.png"
 import emailProject from "../components/assets/img/emailProject.png"
+import tsika from "../components/assets/img/tsika.png"
 
 const projects : Project[] = [
     {
     id: 1,
+    title: 'Tsika',
+    description: 'A full-stack real-time chat application built with React, Node.js, Express, MongoDB, and Socket.io.',
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB', "Socket.io"],
+    githubUrl: 'https://github.com/johnmarkfrncsc/mern-chat-app',
+    liveUrl: 'https://tsika.skwtr.com/',
+    status: 'in-progress',
+    image: tsika,
+},
+  {
+    id: 2,
     title: 'Rentara',
     description: 'A full-stack property management web application built with React, Node.js, Express, and MongoDB.',
     techStack: ['React', 'Node.js', 'Express', 'MongoDB'],
@@ -12,9 +23,9 @@ const projects : Project[] = [
     liveUrl: 'https://rentara.skwtr.com',
     status: 'in-progress',
     image: rentara,
-},
-  {
-    id: 2,
+  },
+    {
+    id: 3,
     title: 'Email Sender',
     description: 'Write and send emails directly to Gmail using SendGrid. A fullstack TypeScript practice project.',
     techStack: ['TypeScript', 'Node.js', 'SendGrid'],
