@@ -8,16 +8,12 @@ const Project = () => {
         <h3 className="text-lg font-medium uppercase tracking-widest text-[#F8F8F3] mb-8">
           personal projects
         </h3>
-        <a
-          href="https://github.com/johnmarkfrncsc"
-          className="text-md text-[#4b5563] hover:text-[#F8F8F3] transition-colors"
-        >
-          view all →
-        </a>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory project-scroll">
         {projects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
+          <div key={project.id} className="w-75 shrink-0 flex snap-start">
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
     </section>
