@@ -1,5 +1,5 @@
 import { useState } from "react";
-import professional from "../../data/professional";
+import professional from "../../data/professional.ts";
 
 const Professional = () => {
   const [activeTab, setActiveTab] = useState<"professional" | "education">(

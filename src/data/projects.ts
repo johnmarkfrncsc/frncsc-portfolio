@@ -1,4 +1,4 @@
-import type { Project } from "../types/ProjectType";
+import type { Project } from "../types/projectType.ts";
 import rentara from "../components/assets/img/rentara.png"
 import emailProject from "../components/assets/img/emailProject.png"
 import tsika from "../components/assets/img/tsika.png"
@@ -11,7 +11,7 @@ const projects : Project[] = [
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', "Socket.io"],
     githubUrl: 'https://github.com/johnmarkfrncsc/mern-chat-app',
     liveUrl: 'https://tsika.skwtr.com/',
-    status: 'in-progress',
+    status: 'completed',
     image: tsika,
 },
   {

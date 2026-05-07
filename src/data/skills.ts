@@ -1,4 +1,4 @@
-import type { Skill } from "../types/ProjectType"
+import type { Skill } from "../types/projectType.ts"
 
 const skills: Skill[] = [
   { name: 'React', category: 'frontend' },
