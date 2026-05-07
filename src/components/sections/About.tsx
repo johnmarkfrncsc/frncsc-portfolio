@@ -22,13 +22,14 @@ const About = () => {
             </p>
             <ul className="divide-y divide-[#27272a]">
               <li className="text-sm text-[#f9fafb] py-2">
-                Building Rentara — rental management app
+                Deepening knowledge in React and frontend development
               </li>
               <li className="text-sm text-[#f9fafb] py-2">
-                Deepening TypeScript across all projects
+                Actively seeking frontend and fullstack roles using React
               </li>
               <li className="text-sm text-[#f9fafb] py-2">
-                Open to frontend / fullstack roles
+                Adding new features to Tsika and improving other personal
+                projects
               </li>
             </ul>
           </div>
