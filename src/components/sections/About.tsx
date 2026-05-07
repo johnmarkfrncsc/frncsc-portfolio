@@ -20,14 +20,14 @@ const About = () => {
             <p className="text-md font-semibold text-[#f9fafb] mb-3">
               Currently
             </p>
-            <ul className="divide-y divide-[#27272a]">
-              <li className="text-sm text-[#f9fafb] py-2">
+            <ul className="divide-y divide-[#27272a] text-gray-400 text-sm tracking-wide">
+              <li className="py-2">
                 Deepening knowledge in React and frontend development
               </li>
-              <li className="text-sm text-[#f9fafb] py-2">
+              <li className=" py-2">
                 Actively seeking frontend and fullstack roles using React
               </li>
-              <li className="text-sm text-[#f9fafb] py-2">
+              <li className="py-2">
                 Adding new features to Tsika and improving other personal
                 projects
               </li>
