@@ -6,12 +6,15 @@ import Skills from "./components/sections/Skills";
 import Project from "./components/sections/Project";
 import Contact from "./components/sections/Contact";
 import Professional from "./components/sections/Professional";
+
 function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#0d0d0d]">
-      <div className="max-w-3xl mx-auto px-6 flex-1 flex flex-col">
+      <header className="sticky top-0 z-10 flex justify-center px-6">
         <Navbar />
-        <main className="flex-1">
+      </header>
+      <div className="px-6 flex-1 flex flex-col">
+        <main className="flex-1 max-w-3xl mx-auto w-full">
           <Hero />
           <Professional />
           <Project />

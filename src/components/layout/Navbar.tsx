@@ -11,8 +11,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-10 items-center py-4 bg-transparent backdrop-blur-xs">
-      <div className="flex items-center">
+    <nav className="top-0 w-full items-center px-8 py-6 bg-transparent/50 backdrop-blur-sm">
+      <div className="flex justify-between items-center max-w-3xl mx-auto text-md">
         {/* ADD DARK/LIGHT THEME TOGGLE */}
         <div className="hidden md:flex gap-6">
           {navLinks.map((link) => (
