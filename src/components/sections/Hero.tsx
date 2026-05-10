@@ -1,4 +1,4 @@
-import resume from "../assets/docs/resume.pdf";
+import MarkFrancsico from "../assets/docs/MarkFrancisco.pdf";
 import SwipeCard from "../ui/SwipeCard";
 import swipe1 from "../assets/img/swipe1.jpg";
 import swipe2 from "../assets/img/swipe2.jpg";
@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <div className="flex gap-6 flex-wrap">
           <a
-            href={resume}
+            href={MarkFrancsico}
             target="_blank"
             rel="noreferrer"
             className="text-sm font-semibold flex gap-2 px-4 py-2 rounded-lg bg-[#0d0d0d] text-[#f9fafb] border border-[#1F2937] hover:bg-[#1F2937]"
