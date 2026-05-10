@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 interface SwipeCardProps {
@@ -9,12 +9,30 @@ const SWIPE_THRESHOLD = 20;
 
 const SwipeCard = ({ images }: SwipeCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+
   const startX = useRef(0);
   const isDragging = useRef(false);
 
   const dragX = useMotionValue(0);
   const rotate = useTransform(dragX, [-150, 150], [-15, 15]);
   const opacity = useTransform(dragX, [-150, 0, 150], [0.5, 1, 0.5]);
+
+  useEffect(() => {
+    let count = 0;
+
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+
+      img.onload = () => {
+        count++;
+        if (count === images.length) {
+          setLoaded(true);
+        }
+      };
+    });
+  }, [images]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     isDragging.current = true;
@@ -57,42 +75,60 @@ const SwipeCard = ({ images }: SwipeCardProps) => {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
-      {images.map((img, index) => {
-        const offset = (index - currentIndex + images.length) % images.length;
+      {!loaded && (
+        <div className="absolute inset-0">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="absolute inset-0 rounded-xl bg-[#1f2937] overflow-hidden"
+              style={{
+                transform: `translateY(${i * -10}px) scale(${1 - i * 0.06})`,
+                zIndex: 10 - i,
+              }}
+            >
+              <div className="absolute inset-0 shimmer bg-linear-to-r from-transparent via-white/10 to-transparent" />
+            </div>
+          ))}
+        </div>
+      )}
 
-        const isTop = offset === 0;
+      {loaded &&
+        images.map((img, index) => {
+          const offset = (index - currentIndex + images.length) % images.length;
 
-        return (
-          <motion.div
-            key={index}
-            className="absolute inset-0 rounded-xl overflow-hidden origin-bottom"
-            style={{
-              zIndex: images.length - offset,
-              x: isTop ? dragX : offset * 2,
-              rotate: isTop ? rotate : offset % 2 === 0 ? -5 : 5,
-              opacity: isTop ? opacity : 1,
-              y: offset * -18,
-              scale: 1 - offset * 0.06,
-              cursor: isTop ? "grab" : "default",
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 32,
-              delay: offset * 0.05,
-            }}
-            onMouseDown={isTop ? handleMouseDown : undefined}
-          >
-            <img
-              src={img}
-              loading="eager"
-              alt="photo"
-              className="w-full h-full object-cover"
-              draggable={false}
-            />
-          </motion.div>
-        );
-      })}
+          const isTop = offset === 0;
+
+          return (
+            <motion.div
+              key={`${index}-${currentIndex}`}
+              className="absolute inset-0 rounded-xl overflow-hidden origin-bottom"
+              style={{
+                zIndex: images.length - offset,
+                x: isTop ? dragX : offset * 2,
+                rotate: isTop ? rotate : offset % 2 === 0 ? -5 : 5,
+                opacity: isTop ? opacity : 1,
+                y: offset * -18,
+                scale: 1 - offset * 0.06,
+                cursor: isTop ? "grab" : "default",
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 32,
+                delay: offset * 0.05,
+              }}
+              onMouseDown={isTop ? handleMouseDown : undefined}
+            >
+              <img
+                src={img}
+                loading="eager"
+                alt="photo"
+                className="w-full h-full object-cover"
+                draggable={false}
+              />
+            </motion.div>
+          );
+        })}
     </div>
   );
 };
