@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="py-5 border-t border-[#18181b] flex justify-between items-center">
+    <footer className="py-5 flex justify-between items-center">
       <p className="text-xs tracking-wide text-[#6b7280]">
         © 2025
         <a
