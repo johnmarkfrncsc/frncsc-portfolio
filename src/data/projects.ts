@@ -7,7 +7,7 @@ const projects : Project[] = [
     {
     id: 1,
     title: 'Tsika',
-    description: 'A full-stack real-time chat application built with React, Node.js, Express, MongoDB, and Socket.io.',
+    description: 'Tsika is a full-stack real-time chat application inspired by Discord, featuring instant messaging, online presence, user profiles, and customizable themes.',
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', "Socket.io"],
     githubUrl: 'https://github.com/johnmarkfrncsc/mern-chat-app',
     liveUrl: 'https://tsika.skwtr.com/',
